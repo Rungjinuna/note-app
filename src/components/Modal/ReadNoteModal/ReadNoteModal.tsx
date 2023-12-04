@@ -9,7 +9,7 @@ import parse from 'html-react-parser';
 
 interface ReadNoteModalProps {
   note: Note;
-  type: string;
+  type: string | undefined;
 }
 
 const ReadNoteModal = ({ note, type }: ReadNoteModalProps) => {

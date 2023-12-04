@@ -6,7 +6,7 @@ import { toggleMenu } from '../../store/menu/menuSlice';
 import { ButtonFill } from '../../styles/styles';
 import getStandardName from '../../utils/getStandardName';
 import { useLocation } from 'react-router-dom';
-import { toggleCreateNotModal } from '../../store/modal/modalSlice';
+import { toggleCreateNoteModal } from '../../store/modal/modalSlice';
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
@@ -32,7 +32,7 @@ const Navbar = () => {
 
         {state !== 'Trash' && state !== 'Archive' && (
           <ButtonFill
-            onClick={() => dispatch(toggleCreateNotModal(true))}
+            onClick={() => dispatch(toggleCreateNoteModal(true))}
             className='nav__btn'
           >
             <span>+</span>

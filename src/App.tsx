@@ -1,7 +1,8 @@
 import { ToastContainer } from 'react-toastify';
-import { TagsModal } from './components';
+import { CreateNoteModal, TagsModal } from './components';
 import { useAppSelector } from './hooks/redux';
 import { Navbar, Sidebar } from './layout';
+import './App.css';
 import {
   AllNotes,
   ArchiveNotes,
@@ -10,20 +11,23 @@ import {
   TrashNotes,
 } from './pages';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 
-const App = () => {
-  <ToastContainer
-    position='bottom-right'
-    theme='light'
-    pauseOnHover
-    autoClose={1500}
-  />;
-  const { viewEditTagsModal, viewCreateNotesModal } = useAppSelector(
+function App() {
+  const { viewEditTagsModal, viewCreateNoteModal } = useAppSelector(
     (state) => state.modal
   );
   return (
     <div className='app'>
+      {viewCreateNoteModal && <CreateNoteModal />}
       {viewEditTagsModal && <TagsModal type='edit' />}
+      <ToastContainer
+        position='bottom-right'
+        theme='light'
+        pauseOnHover
+        autoClose={1500}
+      />
+
       <BrowserRouter>
         <Sidebar />
         <div className='app__container'>
@@ -40,5 +44,5 @@ const App = () => {
       </BrowserRouter>
     </div>
   );
-};
+}
 export default App;

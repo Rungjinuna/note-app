@@ -24,7 +24,7 @@ export const MainBox = styled.div<{ openMenu: string }>`
   width: 250px;
   height: 100%;
   min-height: 100vh;
-  background-color: #cc99fc;
+  background-color: #ecd5e3;
 
   @media screen and (max-width: 950px) {
     transition: 350ms transform ease-in-out;

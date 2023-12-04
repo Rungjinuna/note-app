@@ -18,7 +18,7 @@ const modalSlice = createSlice({
   name: 'modal',
   initialState,
   reducers: {
-    toggleCreateNotModal: (state, action) => {
+    toggleCreateNoteModal: (state, action) => {
       state.viewCreateNoteModal = action.payload;
     },
 
@@ -39,7 +39,7 @@ const modalSlice = createSlice({
   },
 });
 
-export const { toggleCreateNotModal, toggleFiltersModal, toggleTagsModal } =
+export const { toggleCreateNoteModal, toggleFiltersModal, toggleTagsModal } =
   modalSlice.actions;
 
 export default modalSlice.reducer;

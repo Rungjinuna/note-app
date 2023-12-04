@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Container } from '../ErrorPage/ErrorPage.styles';
-import { ButtonOutline, EmptyMsgBox } from '../../styles/styles';
+import { ButtonOutline, Container, EmptyMsgBox } from '../../styles/styles';
 import { useAppSelector } from '../../hooks/redux';
 import { Box, InputBox, TopBox } from './AllNotes.styles';
 import { useDispatch } from 'react-redux';
